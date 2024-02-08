@@ -3,14 +3,14 @@
     /* Application Colour */
     --color-primary: var(--color-black);
     --color-primary-variant: var(--color-gray);
-    --color-accent: var(--color-blue);
+    --color-accent: var(--color-yellow);
     --color-accent-variant: var(--color-orange);
     --color-text: var(--color-white);
 
     /* Colour */
     --color-white: #ffffff;
     --color-black: #050a13;
-    --color-blue: #03e8f9;
+    --color-yellow: #e1ff49;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
 }
@@ -91,4 +91,50 @@ button:focus {
 .header__menu__item.active {
     border: 1px solid var(--color-accent);
     border-radius: 4px;
+}
+
+#home {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 5rem 10rem;
+    padding-top: 7rem;
+}
+
+.home__profile {
+    width: 250px;
+    height: 250px;;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+    border-radius: 100%;
+}
+
+.home__title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home__title--strong {
+    color: var(--color-accent);
+}
+
+.home__description {
+    font-size: 1rem;
+}
+
+.home__contact {
+    display: inline-block;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: var(--color-black);
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.home__contact:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    outline: 1px solid var(--color-accent);
 }
