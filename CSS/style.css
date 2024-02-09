@@ -3,16 +3,21 @@
     /* Application Colour */
     --color-primary: var(--color-black);
     --color-primary-variant: var(--color-gray);
+    --color-secondary: var(--color-pink);
     --color-accent: var(--color-yellow);
-    --color-accent-variant: var(--color-orange);
+    --color-accent-variant: var(--color-green);
     --color-text: var(--color-white);
 
     /* Colour */
     --color-white: #ffffff;
     --color-black: #050a13;
     --color-yellow: #e1ff49;
-    --color-orange: #fd6413;
+    --color-green: #06b600;
+    --color-pink: #ff6aab;
     --color-gray: #1b1e26;
+
+    /* Size */
+    --size-max-width : 1200px;
 }
 
 * {
@@ -52,6 +57,11 @@ button:focus {
 .section {
     padding: 4rem;
     text-align: center;
+}
+
+.max-containter {
+    max-width: var(--size-max-width);
+    margin: auto;
 }
 
 .title {
@@ -121,8 +131,10 @@ button:focus {
     width: 250px;
     height: 250px;;
     object-fit: cover;
-    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent);
+    /* border: 2px solid var(--color-accent); */
     border-radius: 100%;
+    box-shadow: 5px 5px rgba(0, 98, 90, 0.4), 10px 10px rgba(0, 98, 90, 0.3), 15px 15px rgba(0, 98, 90, 0.2), 20px 20px rgba(0, 98, 90, 0.1), 25px 25px rgba(0, 98, 90, 0.05);
 }
 
 .home__title {
@@ -153,4 +165,59 @@ button:focus {
     background-color: transparent;
     color: var(--color-accent);
     outline: 1px solid var(--color-accent);
+}
+
+.majors {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    margin: 2.5rem 0;
+}
+
+.major {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 2rem 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    cursor: default;
+    box-shadow: 4.0px 8.0px 8.0px rgba(0,0,0,0.38);
+}
+
+.major__icon {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    color: var(--color-accent);
+    transition: all 300ms ease;
+}
+
+.major__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.major:hover .major__icon {
+    transform: rotate(-15deg) scale(1.2);
+}
+
+.jobs {
+    text-align: start;
+    margin: 1rem;
+}
+
+.job {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.job__name {
+    color: var(--color-primary);
+}
+
+.job__period {
+    color: var(--color-primary);
+    font-size: 0.8rem;
 }
