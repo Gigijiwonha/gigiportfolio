@@ -1,7 +1,7 @@
 /* Global */
 :root {
     /* Application Colour */
-    --color-primary: var(--color-black);
+    --color-primary: var(--color-blue);
     --color-primary-variant: var(--color-gray);
     --color-secondary: var(--color-pink);
     --color-accent: var(--color-yellow);
@@ -11,10 +11,12 @@
     /* Colour */
     --color-white: #ffffff;
     --color-black: #050a13;
-    --color-yellow: #e1ff49;
+    --color-yellow: #ebff87;
     --color-green: #06b600;
-    --color-pink: #ff6aab;
-    --color-gray: #1b1e26;
+    --color-pink: #ff817f;
+    --color-gray: #313131;
+    --color-blue: #6592d7;
+    --color-darkBlue: #5b80b6;
 
     /* Size */
     --size-max-width : 1200px;
@@ -76,7 +78,7 @@ button:focus {
 
 /* Header */
 .header {
-    background-color: #050a13;
+    background-color: transparent;
     position: fixed;
     top: 0;
     width: 100%;
@@ -85,6 +87,12 @@ button:focus {
     align-items: center;
     padding: 1rem;
     z-index: 1;
+    transition: all 300ms ease;
+}
+
+.header--dark {
+    background-color: var(--color-primary);
+    box-shadow: var(--color-accent) 0px 0px 0px 2px, var(--color-accent) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .header__logo {
@@ -128,6 +136,7 @@ button:focus {
     padding-top: 7rem;
 }
 
+
 .home__profile {
     width: 250px;
     height: 250px;;
@@ -167,6 +176,8 @@ button:focus {
     color: var(--color-accent);
     outline: 1px solid var(--color-accent);
 }
+
+/* About */
 
 .majors {
     display: flex;
@@ -223,6 +234,8 @@ button:focus {
     font-size: 0.8rem;
 }
 
+/* Skills */
+
 #skills {
     background-color: var(--color-primary-variant);
     color: var(--color-text);
@@ -251,12 +264,13 @@ button:focus {
 
 .skills__tools {
     padding: 1rem;
+    background-color: var(--color-darkBlue);
 }
 
 .skills__etc {
     padding: 1rem;
     background-color: var(--color-primary);
-    filter: brightness(170%);
+    filter: brightness(140%);
 }
 
 .bar {
@@ -421,6 +435,7 @@ button:focus {
 
 /* Arrow up */
 .arrow-up {
+    opacity: 0;
     position: fixed;
     bottom: 3rem;
     right: 3rem;
@@ -431,6 +446,7 @@ button:focus {
     border-radius: 100%;
     text-align: center;
     box-shadow: 3px 3px 0px 0px var(--color-accent);
+    transition: opacity 300ms ease;
 }
 
 /* Footer */
