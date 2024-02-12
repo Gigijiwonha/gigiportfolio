@@ -28,3 +28,18 @@ document.addEventListener('scroll', () => {
         arrowUp.style.opacity = 0;
     }
 });
+
+// 화면을 줄이면 햄버거 모양 버튼이 생긴다
+// 버튼을 누르면 메뉴바가 나온다
+// 메뉴를 클릭하면 화면으로 이동하면서 메뉴바가 닫힌다
+
+const headerMenu = document.querySelector('.header__menu');
+const headerToggle = document.querySelector('.header__toggle');
+
+headerToggle.addEventListener('click', () => {
+    headerMenu.classList.toggle('open');
+});
+
+headerMenu.addEventListener('click', () => {
+    headerMenu.classList.remove('open');
+});
