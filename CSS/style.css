@@ -12,11 +12,19 @@
     --color-white: #ffffff;
     --color-black: #050a13;
     --color-yellow: #ebff87;
-    --color-green: #06b600;
+    --color-green: rgba(9,121,77,1);
     --color-pink: #ff817f;
-    --color-gray: #313131;
+    --color-gray: #202020;
     --color-blue: #6592d7;
     --color-darkBlue: #5b80b6;
+
+    /* Background */
+    --color-bg-gradient: linear-gradient(
+        27deg, rgba(2,0,36,1) 15%, rgba(9,121,77,1) 61%, rgba(0,187,215,1) 100%
+    );
+    --color-bg-gradient-variant: linear-gradient(
+        0deg, rgba(2,0,36,1) 39%, rgba(9,121,77,1) 100%, rgba(0,187,215,1) 100%
+    );
 
     /* Size */
     --size-max-width : 1200px;
@@ -61,7 +69,7 @@ button:focus {
 
 /* Common */
 .section {
-    padding: 4rem;
+    padding: 5rem 4rem;
     text-align: center;
 }
 
@@ -99,7 +107,8 @@ button:focus {
 }
 
 .header--dark {
-    background-color: var(--color-primary);
+    
+    background-color: var(--color-black);
     box-shadow: var(--color-accent) 0px 0px 0px 2px, var(--color-accent) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
@@ -148,11 +157,33 @@ button:focus {
 }
 
 #home {
-    background-color: var(--color-primary);
+    position: relative;
+    background-color: var(--color-black);
+    background: var(--color-bg-gradient);
     color: var(--color-text);
     text-align: center;
     padding: 5rem 10rem;
     padding-top: 7rem;
+}
+
+.custom-shape-divider-bottom-1707989668 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1707989668 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-bottom-1707989668 .shape-fill {
+    fill: #FFFFFF;
 }
 
 
@@ -206,7 +237,8 @@ button:focus {
 }
 
 .major {
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
+    /* background: var(--color-bg-gradient-variant); */
     color: var(--color-text);
     padding: 2rem 1rem;
     margin: 1rem;
@@ -256,8 +288,30 @@ button:focus {
 /* Skills */
 
 #skills {
+    position: relative;
     background-color: var(--color-primary-variant);
     color: var(--color-text);
+}
+
+.custom-shape-divider-bottom-1707989859 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1707989859 svg {
+    position: relative;
+    display: block;
+    width: calc(175% + 1.3px);
+    height: 86px;
+}
+
+.custom-shape-divider-bottom-1707989859 .shape-fill {
+    fill: var(--color-black);
 }
 
 .skills {
@@ -278,18 +332,19 @@ button:focus {
 .skills__coding {
     grid-row: span 2;
     padding: 1rem;
-    background-color: var(--color-primary);
+    background: var(--color-bg-gradient-variant);
+    /* background-color: var(--color-accent-variant); */
 }
 
 .skills__tools {
     padding: 1rem;
-    background-color: var(--color-darkBlue);
+    background-color: var(--color-black);
 }
 
 .skills__etc {
     padding: 1rem;
-    background-color: var(--color-primary);
-    filter: brightness(140%);
+    background-color: var(--color-black);
+    filter: brightness(150%);
 }
 
 .bar {
@@ -318,7 +373,7 @@ button:focus {
 /* Work */
 
 #work {
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
     color: var(--color-text);
 }
 
@@ -467,17 +522,40 @@ button:focus {
     font-size: 2rem;
     width: 3rem;
     height: 3rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
     border-radius: 100%;
     text-align: center;
     box-shadow: 3px 3px 0px 0px var(--color-accent);
     transition: opacity 300ms ease;
+    z-index: 1;
 }
 
 /* Footer */
 #contact {
-    background-color: var(--color-primary);
+    position: relative;
+    background: var(--color-bg-gradient-variant);
+    /* background-color: var(--color-primary); */
     color: var(--color-text);
+}
+
+.custom-shape-divider-top-1707990110 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1707990110 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-top-1707990110 .shape-fill {
+    fill: #FFFFFF;
 }
 
 .contact__links {
@@ -515,7 +593,7 @@ button:focus {
         flex-direction: column;
         align-items: start;
         padding: 0.5rem;
-        background-color: var(--color-primary);
+        background-color: var(--color-black);
     }
 
     .header__toggle {
@@ -540,8 +618,7 @@ button:focus {
 
     #home {
         /* background-color: #ff6aab; */
-        padding: 2rem 3rem;
-        padding-top: 6rem;
+        padding: 6rem 3rem;
     }
 
     .home__title {
